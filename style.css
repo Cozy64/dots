@@ -1,0 +1,113 @@
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    /* font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif; */
+    font-family: "monospace", "Font Awesome 6 Free";
+    font-size: 18px;
+}
+
+window#waybar {
+    background-color: rgba(0, 0, 0, 0.6);
+    /*border-bottom: 2px solid rgba(255, 0, 0, 1);*/
+    /*border-right: 2px solid rgba(255, 0, 0, 1);*/
+    /*border-left: 2px solid rgba(255, 0, 0, 1);*/
+    color: #ff0000;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+#workspaces button {
+	color: #ffffff;
+	background: none;
+	transition: none;
+	border: none;
+	padding: 4px;
+}
+#workspaces button.active {
+	color: #ff0000;
+	background: none;
+	transition: none;
+	border: none;
+}
+#workspaces button:hover {
+	color: #ff0000;
+	background: none;
+	transition: none;
+	border: none;
+}
+
+#clock {
+    color: #ff0000;
+}
+
+#battery {
+    color: #ffffff;
+}
+
+#battery.charging, #battery.plugged {
+    color: #00ff00;
+}
+#battery.full {
+    color: #0000ff;
+}
+
+#battery.warning:not(.charging) {
+  color: #ffff00;
+}
+
+@keyframes blink {
+    to {
+        color: #ff0000;
+    }
+}
+
+#battery.critical:not(.charging) {
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#cpu {
+    color: #ffffff;
+}
+
+#memory {
+    color: #ffffff;
+}
+
+#backlight {
+    color: #ffffff;
+}
+
+#network {
+    color: #00ff00;
+}
+
+#network.disconnected {
+    color: #ff0000;
+}
+
+#pulseaudio {
+    color: #ffffff;
+}
+
+#pulseaudio.muted {
+    color: #ff0000;
+} #custom-media { background-color: #66cc99; color: #2a5c45; min-width: 100px; } #temperature { color: #0000ff; } #temperature.critical {
+    color: #ff0000;
+}
+
+#tray {
+    color: #ffffff;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+   /* background-color: #eb4d4b; */
+}

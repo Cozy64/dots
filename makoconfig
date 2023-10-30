@@ -1,0 +1,9 @@
+layer=overlay
+font=monospace 12
+background-color=#000000ff
+text-color=#ff0000ff
+text-alignment=center
+border-color=#ff0000ff
+default-timeout=5000
+#width=200
+#height=100
